@@ -18,34 +18,37 @@
     z-index: 2;
     background-color: white;
 
-    .swiper-pagination-bullet {
-      width: 30px;
-      height: 2px;
-      margin-right: 3px;
-      background-color: #000;
-      display: inline-block;
-      border-radius: 0;
-      transition: opacity .5s ease;
-    }
-
     .swiper-pagination {
       position: absolute;
       top: 10px;
       z-index: 0;
+
+      .swiper-pagination-bullet {
+        width: 30px;
+        height: 2px;
+        margin-right: 3px;
+        background-color: #000;
+        display: inline-block;
+        border-radius: 0;
+        transition: opacity .5s ease;
+      }
     }
 
-    .swiperSlide {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+    .swiper-wrapper {
+      .swiperSlide {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
 
-    .swiper-slide {
-      max-height: 50vh;
-    }
+      .swiper-slide {
+        max-height: 50vh;
+      }
 
-    .swiper-slide-active {
-      max-height: fit-content;
+      .swiper-slide-active {
+        max-height: fit-content;
+      }
+
     }
   }
 }
