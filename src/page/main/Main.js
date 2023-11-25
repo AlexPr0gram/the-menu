@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import logo from "../../logo.png";
-import "./Main.css";
+import "./Main.scss";
 import { motion } from "framer-motion";
 
 function Main() {
