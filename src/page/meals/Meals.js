@@ -1,6 +1,3 @@
-import "swiper/css";
-import "swiper/css/pagination";
-import "./Meals.css";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { GoChevronLeft } from "react-icons/go";
@@ -10,6 +7,8 @@ import ItemTable from "../timeTable/ItemTable/ItemTable.js";
 import { Swiper, SwiperSlide } from "swiper/react";
 import getMenuConfig from "../../common.js";
 import { Pagination } from "swiper/modules";
+import "swiper/scss/bundle";
+import "./Meals.css";
 
 function Meals() {
   const { initialDate } = useParams();
