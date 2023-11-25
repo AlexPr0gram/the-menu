@@ -25,6 +25,7 @@
       background-color: #000;
       display: inline-block;
       border-radius: 0;
+      transition: opacity .5s ease;
     }
 
     .swiper-pagination {
