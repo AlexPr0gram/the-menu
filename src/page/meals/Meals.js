@@ -21,7 +21,7 @@ function Meals() {
   const pagination = {
     clickable: true,
     renderBullet: function (index, className) {
-      return '<div class="' + className + '">' + "</div>";
+      return '<div class="pagination-bullet ' + className + '">' + "</div>";
     },
   };
 
