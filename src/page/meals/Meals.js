@@ -38,28 +38,35 @@ function Meals() {
           {currentDate}
         </motion.div>
       </div>
-      <Swiper
-        initialSlide={firstSlideIndex}
-        modules={[Pagination]}
-        pagination={pagination}
-        className="swiperContainer"
-        onSlideChange={(swiper) => {
-          const date = menuConfig.find(
-            (item) => item.id === swiper.activeIndex + 1
-          ).date;
-          setCurrentDate(date);
-        }}
+      <motion.div
+        initial={{ x: 400, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        exit={{ x: -400, opacity: 0 }}
+        transition={{ duration: 0.5 }}
       >
-        {menuConfig.map((date) => {
-          return (
-            <SwiperSlide className="swiperSlide" key={date.date}>
-              {date.timeTableData.map((item) => {
-                return <ItemTable item={item} key={item.id} />;
-              })}
-            </SwiperSlide>
-          );
-        })}
-      </Swiper>
+        <Swiper
+          initialSlide={firstSlideIndex}
+          modules={[Pagination]}
+          pagination={pagination}
+          className="swiperContainer"
+          onSlideChange={(swiper) => {
+            const date = menuConfig.find(
+              (item) => item.id === swiper.activeIndex + 1
+            ).date;
+            setCurrentDate(date);
+          }}
+        >
+          {menuConfig.map((date) => {
+            return (
+              <SwiperSlide className="swiperSlide" key={date.date}>
+                {date.timeTableData.map((item) => {
+                  return <ItemTable item={item} key={item.id} />;
+                })}
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+      </motion.div>
       <Link className="link" to="/detail">
         <motion.div
           initial={{ y: 20, opacity: 0 }}
