@@ -32,6 +32,10 @@
         border-radius: 0;
         transition: opacity .5s ease;
       }
+
+      .pagination-bullet.swiper-pagination-bullet {
+        background-color: #000;
+      }
     }
 
     .swiper-wrapper {
