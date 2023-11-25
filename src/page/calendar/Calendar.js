@@ -16,7 +16,14 @@ function Calendar() {
   return (
     <div className={detailPageClasses}>
       <div className="header">
-        <img src={logo} className="logo" alt="logo" />
+        <motion.img
+            initial={{ y: -50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: -20, opacity: 0 }}
+            transition={{ duration: 0.5 }}
+            className="logo"
+            src={logo}
+          />
       </div>
       <div className="body">
         {menuConfig.map((item) => {
