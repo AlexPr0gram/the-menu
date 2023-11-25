@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import logo from "../../logo.png";
-import "./TimeTable.css";
+import "./TimeTable.scss";
 import { motion } from "framer-motion";
 import { GoChevronLeft } from "react-icons/go";
 import ItemTable from "./ItemTable/ItemTable";

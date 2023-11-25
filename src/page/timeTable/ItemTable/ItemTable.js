@@ -1,7 +1,7 @@
-import "./ItemTable.css";
+import "./ItemTable.scss";
 import { motion } from "framer-motion";
-import { GoChevronDown, GoChevronUp } from "react-icons/go";
-import { useEffect, useState } from "react";
+import { GoChevronDown } from "react-icons/go";
+import { useState } from "react";
 
 function ItemTable({ item, key }) {
   const [expanded, setExpanded] = useState(false);
