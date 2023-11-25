@@ -58,13 +58,6 @@
 
 }
 
-.link {
-  position: absolute;
-  transform: translate(-50%);
-  left: 50%;
-  bottom: 6em;
-}
-
 .dateTitle {
   text-align: center;
   font-size: 27px;

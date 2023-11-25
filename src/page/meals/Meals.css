@@ -33,11 +33,19 @@
       top: 10px;
       z-index: 0;
     }
-  
+
     .swiperSlide {
       display: flex;
       flex-direction: column;
       align-items: center;
+    }
+
+    .swiper-slide {
+      max-height: 50vh;
+    }
+
+    .swiper-slide-active {
+      max-height: fit-content;
     }
   }
 }
@@ -76,15 +84,17 @@
   height: fit-content;
   display: flex;
   align-items: center;
-  font-size: 30px;
+  font-size: 25px;
 
 }
 
 .link {
   position: absolute;
-  transform: translate(-50%);
-  left: 50%;
-  bottom: 6em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 7em;
+  width: 100%;
 }
 
 .dateTitle {

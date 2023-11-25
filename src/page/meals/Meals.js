@@ -67,6 +67,7 @@ function Meals() {
           })}
         </Swiper>
       </motion.div>
+
       <Link className="link" to="/detail">
         <motion.div
           initial={{ y: 20, opacity: 0 }}
