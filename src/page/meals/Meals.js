@@ -14,20 +14,16 @@ import "swiper/css/pagination";
 function Meals() {
   const { initialDate } = useParams();
   const [currentDate, setCurrentDate] = useState(initialDate);
-  const [slideIndex, setSlideIndex] = useState(1);
   const menuConfig = getMenuConfig();
+  const firstSlideIndex = menuConfig.findIndex(
+    (item) => item.date === initialDate
+  );
   const pagination = {
     clickable: true,
     renderBullet: function (index, className) {
       return '<div class="' + className + '">' + "</div>";
     },
   };
-
-  useEffect(() => {
-    const firstSlide =
-      menuConfig.find((item) => item.date === initialDate).id - 1;
-    setSlideIndex(firstSlide);
-  }, [initialDate, menuConfig]);
 
   return (
     <div className="detailPage">
@@ -43,14 +39,10 @@ function Meals() {
         </motion.div>
       </div>
       <Swiper
-        onSwiper={(swiper) => {
-          swiper.slideTo(slideIndex);
-        }}
+        initialSlide={firstSlideIndex}
         modules={[Pagination]}
         pagination={pagination}
         className="swiperContainer"
-        // initialSlide={getNewInitialSlide}
-        initialSlide={slideIndex}
         onSlideChange={(swiper) => {
           const date = menuConfig.find(
             (item) => item.id === swiper.activeIndex + 1
