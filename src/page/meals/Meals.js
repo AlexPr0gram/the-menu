@@ -8,7 +8,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import getMenuConfig from "../../common.js";
 import { Pagination } from "swiper/modules";
 import "swiper/css/bundle";
-import "./Meals.css";
+import "./Meals.scss";
 
 function Meals() {
   const { initialDate } = useParams();
