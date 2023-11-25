@@ -7,7 +7,7 @@ import ItemTable from "../timeTable/ItemTable/ItemTable.js";
 import { Swiper, SwiperSlide } from "swiper/react";
 import getMenuConfig from "../../common.js";
 import { Pagination } from "swiper/modules";
-import "swiper/scss/bundle";
+import "swiper/css/bundle";
 import "./Meals.css";
 
 function Meals() {
