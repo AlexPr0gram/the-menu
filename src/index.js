@@ -1,21 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import Main from './page/main/Main';
-import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, Routes, Route, Switch, useLocation  } from "react-router-dom"
-import Detail from './page/detail/Detail';
-import TimeTable from './page/timeTable/TimeTable';
-import { AnimatePresence } from 'framer-motion';
-import Router from './Router';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import reportWebVitals from "./reportWebVitals";
+import { BrowserRouter } from "react-router-dom";
+import Router from "./Router";
 
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-      <BrowserRouter>
-        <Router />
-      </BrowserRouter>
+    <BrowserRouter>
+      <Router />
+    </BrowserRouter>
   </React.StrictMode>
 );
 
