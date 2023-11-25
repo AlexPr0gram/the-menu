@@ -1,15 +1,15 @@
-import { Link } from "react-router-dom";
+import "swiper/css";
+import "swiper/css/pagination";
 import "./Meals.css";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { GoChevronLeft } from "react-icons/go";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemTable from "../timeTable/ItemTable/ItemTable.js";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
 import getMenuConfig from "../../common.js";
 import { Pagination } from "swiper/modules";
-import "swiper/css/pagination";
 
 function Meals() {
   const { initialDate } = useParams();
