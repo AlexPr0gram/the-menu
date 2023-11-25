@@ -1,13 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import Main from './page/main/Main';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, Routes, Route, Switch, useLocation  } from "react-router-dom"
+import Detail from './page/detail/Detail';
+import TimeTable from './page/timeTable/TimeTable';
+import { AnimatePresence } from 'framer-motion';
+import Router from './Router';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
   </React.StrictMode>
 );
 

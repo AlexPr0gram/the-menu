@@ -1,0 +1,23 @@
+.App {
+  background-color: var(--background-color);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.logoXL {
+  width: 200px;
+}
+
+.button {
+  margin-top: 20px;
+  color: white;
+  background-color: transparent;
+  outline: none;
+  border: solid 1px white;
+  padding: 15px;
+  border-radius: 8px;
+}
