@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import "./Meals.css";
 import { motion } from "framer-motion";
 import { GoChevronLeft } from "react-icons/go";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemTable from "../timeTable/ItemTable/ItemTable.js";
 import { Swiper, SwiperSlide } from "swiper/react";
