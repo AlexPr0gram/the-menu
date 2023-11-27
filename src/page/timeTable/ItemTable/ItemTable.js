@@ -7,7 +7,7 @@ function ItemTable({ item, key }) {
   const [expanded, setExpanded] = useState(false);
   const variants = {
     open: { height: "65px", x: 0, opacity: 1 },
-    closed: { height: "350px", x: 0, opacity: 1 },
+    closed: { height: "fit-content", x: 0, opacity: 1 },
   };
 
   const title = {
@@ -33,10 +33,16 @@ function ItemTable({ item, key }) {
         <span className="itemTitle">{title[item.id]}</span>
         <GoChevronDown className="itemButton" size={30} />
       </div>
-      <motion.div className="itemContent">
-        <span className="recipeTitle">{item.recipeTitle}</span>
-        <span className="recipeDetails">{item.recipeDetails}</span>
-      </motion.div>
+        {
+          item.recipes.map((recipe) => {
+            return (
+              <motion.div className="itemContent">
+                <span className="recipeTitle">{recipe.recipeTitle}</span>
+                <span className="recipeDetails">{recipe.recipeDetails}</span>
+              </motion.div>
+            )
+          })
+        }
     </motion.div>
   );
 }
